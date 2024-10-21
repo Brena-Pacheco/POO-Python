@@ -1,0 +1,4 @@
+Explicação dos pontos principais:
+Herança: A classe Carro herda da classe Veiculo, o que significa que Carro tem acesso aos atributos e métodos de Veiculo.
+super(): O método super().__init__(marca, modelo) é usado para chamar o construtor da classe Veiculo dentro do construtor de Carro, reutilizando a inicialização de marca e modelo.
+Polimorfismo: A classe Carro redefine o comportamento do método informacao_completa, incluindo o novo atributo numero_portas, estendendo a funcionalidade da classe base.

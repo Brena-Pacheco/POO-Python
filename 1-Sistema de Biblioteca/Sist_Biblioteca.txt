@@ -1,0 +1,3 @@
+O sistema de biblioteca permite adicionar livros, emprestá-los e verificar o inventário de livros. 
+A classe Livro modela os livros da biblioteca e a classe Biblioteca gerencia os livros com os métodos:
+adicionar_livro(), emprestar_livro() e verificar_inventario().
