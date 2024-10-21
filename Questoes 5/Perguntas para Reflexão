@@ -1,0 +1,43 @@
+1. Como a composição facilita a criação de relações complexas entre objetos?
+Eu vejo a composição como uma ferramenta poderosa que permite que objetos sejam formados por outros objetos menores, o que me ajuda a criar relações complexas. 
+Em vez de usar herança, onde uma classe "é um" tipo de outra classe, a composição permite que eu diga que uma classe "tem um" outro objeto. 
+Isso me dá mais flexibilidade na hora de construir o sistema.
+Por exemplo, se eu estiver criando um sistema de gerenciamento de veículos ou de uma escola, 
+eu posso dizer que a classe Escola "tem" vários objetos da classe Curso, e que cada Curso "tem" vários objetos da classe Aluno. 
+Isso faz muito mais sentido do que tentar usar herança, já que eu posso criar essas relações de maneira modular, combinando objetos diferentes.
+
+2. Qual é a vantagem de usar composição em vez de herança neste exercício?
+Quando penso em herança, estou dizendo que uma classe é um tipo de outra, o que às vezes cria uma ligação muito rígida entre elas. 
+A composição, por outro lado, me dá mais liberdade porque as classes podem ser combinadas sem que uma dependa tanto da outra.
+
+No caso deste exercício, usar composição tem várias vantagens. Primeiro, ela mantém as classes mais independentes, o que facilita a manutenção do código. 
+Por exemplo, se eu precisar alterar a classe Curso, isso não vai afetar diretamente a classe Escola. Além disso, com a composição, posso facilmente reutilizar as classes em outros contextos. 
+Se eu quiser usar a classe Curso em outro sistema, posso fazer isso sem ter que mexer na hierarquia de herança. Por fim, posso substituir componentes individuais com facilidade. 
+Se eu precisar mudar o comportamento de como um curso é estruturado, basta trocar o objeto Curso sem mexer na estrutura maior da Escola.
+
+3. Como o encapsulamento é utilizado nas classes Aluno, Curso e Escola?
+No meu sistema, eu uso o encapsulamento para proteger os dados importantes dentro de cada classe. 
+A ideia é manter certos atributos privados e controlá-los por meio de métodos públicos.
+Isso me dá mais controle sobre como esses dados são acessados e modificados.
+
+Nas classes Aluno, Curso e Escola, eu defino os atributos como privados, colocando um sublinhado (_) antes deles, como _nome, _idade, etc. 
+Dessa forma, ninguém fora da classe pode acessá-los diretamente. Para permitir que outras partes do sistema acessem ou modifiquem esses valores, eu crio métodos de acesso (getters e setters). 
+Isso garante que eu possa validar os dados antes de modificá-los. 
+Por exemplo, posso garantir que o nome de um aluno sempre seja uma string válida antes de ser atribuído.
+
+Essa técnica ajuda a manter os dados seguros e evita que alguém modifique um atributo de forma incorreta ou inesperada.
+
+4. Como você pode estender este sistema para incluir novas funcionalidades, como notas dos alunos e professores para cada curso?
+Para estender esse sistema e incluir funcionalidades como notas dos alunos e professores em cada curso, eu começaria adicionando algumas novas classes e propriedades.
+
+Adicionar notas dos alunos: Eu criaria uma nova classe chamada Nota, onde eu posso armazenar informações como o valor da nota e a data em que foi lançada. Na classe Aluno, eu adicionaria uma lista de objetos da classe Nota para armazenar todas as notas de um aluno.
+Isso permitiria que cada aluno tivesse várias notas associadas a ele. 
+Eu também poderia adicionar métodos para calcular a média dessas notas, adicionar novas notas, ou verificar se o aluno passou ou não no curso.
+
+Adicionar professores aos cursos: Eu criaria uma classe Professor com atributos como nome, matéria e número de identificação. Na classe Curso, eu adicionaria uma propriedade para armazenar o professor responsável por aquele curso. 
+Dessa forma, cada curso teria um professor associado. Eu também poderia adicionar um método para permitir que o professor lançasse notas para os alunos.
+
+Estender a classe Curso: Eu poderia adicionar uma lista de alunos matriculados em cada curso, com métodos para matricular e remover alunos conforme necessário. Além disso, incluiria um método para o professor lançar notas diretamente para os alunos.
+
+Essas novas funcionalidades aumentariam bastante a complexidade e a utilidade do sistema, me permitindo gerenciar notas e a relação entre professores e alunos de maneira muito mais eficaz.
+
