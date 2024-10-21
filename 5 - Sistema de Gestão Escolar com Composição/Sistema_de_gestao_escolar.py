@@ -5,7 +5,7 @@ class Aluno:
         self.matricula = matricula
 
     def mostrar_info(self):
-        print(f"Aluno: {self.nome}, Matrícula: {self.matricula}")
+        print(f"Aluno: {self.nome}, Matricula: {self.matricula}")
 
 # Classe Curso
 class Curso:
@@ -40,10 +40,10 @@ class Escola:
 aluno1 = Aluno("Alice", "001")
 aluno2 = Aluno("Bob", "002")
 
-curso1 = Curso("Matemática", "MAT101")
+curso1 = Curso("Matematica", "MAT101")
 curso1.adicionar_aluno(aluno1)
 curso1.adicionar_aluno(aluno2)
 
-escola = Escola("Escola Exemplo")
+escola = Escola("Instituto Federal do Amazonas")
 escola.adicionar_curso(curso1)
 escola.mostrar_cursos()
