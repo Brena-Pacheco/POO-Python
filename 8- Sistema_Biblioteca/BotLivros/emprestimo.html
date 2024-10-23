@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimo de Livro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro de Empréstimo</h2>
+        <form id="form-emprestimo">
+            <label for="codigo">Código do Livro:</label>
+            <input type="text" id="codigo" name="codigo" placeholder="Ex: 12345" required>
+
+            <label for="cliente">Nome do Cliente:</label>
+            <input type="text" id="cliente" name="cliente" placeholder="Ex: João Silva" required>
+
+            <button type="button" id="registrar-emprestimo">Registrar Empréstimo</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>

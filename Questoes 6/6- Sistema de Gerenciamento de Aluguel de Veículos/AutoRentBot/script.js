@@ -9,6 +9,12 @@ document.getElementById('adicionar-veiculo').addEventListener('click', function(
     const tipo = document.getElementById('tipo').value;
     const opcaoAdicional = document.getElementById('opcao-adicional').value;
 
+    // Verifica se todos os campos estão preenchidos
+    if (!nome || !ano || !valorDiario || !tipo || !opcaoAdicional) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
     // Adiciona o veículo à lista
     veiculos.push({
         nome,
@@ -31,7 +37,7 @@ document.getElementById('calcular-aluguel').addEventListener('click', function()
 
     let resultado = 'Veículos cadastrados:<br>';
     veiculos.forEach((veiculo, index) => {
-        resultado += `${index + 1}. ${veiculo.nome} (${veiculo.ano}) - Tipo: ${veiculo.tipo}, Valor Diário: R$${veiculo.valorDiario}, Combustível/Cilindrada: ${veiculo.opcaoAdicional}<br>`;
+        resultado += `${index + 1}. ${veiculo.nome} (${veiculo.ano}) - Tipo: ${veiculo.tipo}, Valor Diário: R$ ${parseFloat(veiculo.valorDiario).toFixed(2)}, Combustível/Cilindrada: ${veiculo.opcaoAdicional}<br>`;
     });
 
     // Exibe a lista de veículos

@@ -23,7 +23,7 @@ class Form_Bot:
         self.bot.driver_path = ChromeDriverManager().install()
         
         # Caminho do arquivo Excel
-        caminho_excel = r'C:\\Users\\matutino\\Desktop\\POO\\Exercicios_Individuais\\6- Sistema de Gerenciamento de Aluguel de Veículos\\AutoRentBot\\veiculos.xlsx'
+        caminho_excel = r'C:\\Users\\matutino\\OneDrive\\Área de Trabalho\\POO\\Exercicios_Individuais\\Questoes 6\\6- Sistema de Gerenciamento de Aluguel de Veículos\AutoRentBot\\veiculos.xlsx'
         
         # Ler a planilha Excel
         try:
